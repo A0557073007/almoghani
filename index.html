@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="الموقع الشخصي لأحمد المغني" />
+  <title>أحمد المغني | الموقع الشخصي</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="noise"></div>
+
+  <header class="nav">
+    <a class="brand" href="#home">أحمد المغني</a>
+    <button class="menu-btn" aria-label="فتح القائمة" onclick="toggleMenu()">☰</button>
+    <nav id="menu">
+      <a href="#home">الرئيسية</a>
+      <a href="#about">نبذة</a>
+      <a href="#quotes">عبارات</a>
+      <a href="#contact">تواصل</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero reveal">
+      <div class="hero-copy">
+        <span class="eyebrow">ALMOGHANI.NET</span>
+        <h1>أحمد <span>المغني</span></h1>
+        <p class="lead">مساحة شخصية بهوية هادئة، حضور أنيق، وتفاصيل تصنع الفرق.</p>
+        <div class="actions">
+          <a class="btn primary" href="#about">اعرف أكثر</a>
+          <a class="btn ghost" href="#contact">تواصل معي</a>
+        </div>
+      </div>
+
+      <div class="portrait-wrap">
+        <div class="halo"></div>
+        <div class="portrait-card">
+          <div class="portrait-placeholder">
+            <span>ضع صورتك هنا</span>
+            <small>استبدلها لاحقًا بسهولة</small>
+          </div>
+        </div>
+        <blockquote>«أصنع من كل يوم قصة تستحق أن تُروى»</blockquote>
+      </div>
+    </section>
+
+    <section id="about" class="section reveal">
+      <div class="section-head">
+        <span>01</span>
+        <h2>نبذة عني</h2>
+      </div>
+      <div class="glass">
+        <p>
+          أهلاً بك في موقعي الشخصي. هذه الصفحة مساحة بسيطة تجمع نبذة عني،
+          بعض العبارات التي أحبها، وروابط التواصل. يمكن تعديل النصوص والصور
+          والأقسام لاحقًا متى ما رغبت.
+        </p>
+      </div>
+    </section>
+
+    <section id="quotes" class="section reveal">
+      <div class="section-head">
+        <span>02</span>
+        <h2>عبارات</h2>
+      </div>
+      <div class="cards">
+        <article class="quote-card">
+          <p>الهدوء لا يعني الغياب، أحيانًا هو أكثر أشكال الحضور قوة.</p>
+        </article>
+        <article class="quote-card">
+          <p>اصنع لنفسك اسمًا يليق بما تؤمن به، لا بما يتوقعه الآخرون.</p>
+        </article>
+        <article class="quote-card">
+          <p>التفاصيل الصغيرة هي التي تصنع الانطباع الكبير.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="section reveal">
+      <div class="section-head">
+        <span>03</span>
+        <h2>تواصل</h2>
+      </div>
+      <div class="contact-grid">
+        <a class="contact-card" href="mailto:ahmed@almoghani.net">
+          <strong>البريد الإلكتروني</strong>
+          <span>ahmed@almoghani.net</span>
+        </a>
+        <a class="contact-card" href="#" onclick="return false;">
+          <strong>منصات التواصل</strong>
+          <span>أضف روابطك هنا لاحقًا</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>© <span id="year"></span> Ahmed Almoghani</span>
+    <span>almoghani.net</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
