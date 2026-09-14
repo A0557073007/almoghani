@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AG07 | أحمد المغني</title>
+<meta name="description" content="الموقع الشخصي لأحمد المغني">
+<style>
+:root{
+  --navy:#0b2b55;
+  --blue:#1f5fa8;
+  --blue2:#2d73c7;
+  --soft:#eef4fb;
+  --line:#d9e5f3;
+  --text:#17304f;
+  --muted:#71839a;
+  --white:#fff;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:Tahoma,Arial,sans-serif;
+  background:linear-gradient(180deg,#eef4fb 0,#f7faff 45%,#eef4fb 100%);
+  color:var(--text);
+}
+a{text-decoration:none;color:inherit}
+.shell{width:min(1180px,calc(100% - 24px));margin:auto;padding:18px 0 28px}
+.topbar{
+  background:linear-gradient(135deg,var(--navy),#153f76);
+  color:#fff;border-radius:24px;padding:18px 22px;
+  display:flex;align-items:center;justify-content:space-between;
+  box-shadow:0 18px 45px rgba(14,46,85,.18)
+}
+.brand{display:flex;align-items:center;gap:12px}
+.brand-mark{
+  width:56px;height:56px;border-radius:18px;background:#fff;color:var(--navy);
+  display:grid;place-items:center;font-weight:900;font-size:20px;letter-spacing:1px
+}
+.brand-copy b{display:block;font-size:18px}
+.brand-copy span{font-size:12px;opacity:.78}
+.nav{display:flex;gap:18px;font-size:13px}
+.hero{
+  margin-top:16px;background:#fff;border:1px solid var(--line);border-radius:26px;
+  display:grid;grid-template-columns:1.25fr .75fr;overflow:hidden;
+  box-shadow:0 18px 45px rgba(14,46,85,.08)
+}
+.hero-copy{padding:46px}
+.eyebrow{color:var(--blue);font-weight:700;font-size:13px}
+.hero h1{font-size:clamp(38px,7vw,74px);margin:8px 0 4px;color:var(--navy)}
+.hero h2{font-size:22px;margin:0 0 14px;color:#315a88}
+.hero p{line-height:2;color:var(--muted);max-width:650px}
+.cta{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+.btn{padding:12px 17px;border-radius:999px;border:1px solid var(--line);font-size:13px}
+.btn.primary{background:var(--navy);color:#fff;border-color:var(--navy)}
+.hero-art{
+  min-height:360px;position:relative;overflow:hidden;
+  background:
+    radial-gradient(circle at 65% 25%,rgba(117,177,241,.65),transparent 25%),
+    linear-gradient(160deg,#dfeefd 0 45%,#a8c8ea 45% 60%,#4e79a7 60% 100%);
+}
+.hero-art:before,.hero-art:after{
+  content:"";position:absolute;bottom:0;background:#214b79;border-radius:8px 8px 0 0
+}
+.hero-art:before{right:14%;width:20%;height:50%;box-shadow:-95px 22px 0 #2f5b8b,-180px -12px 0 #35699e}
+.hero-art:after{right:0;width:100%;height:14%;background:#173d68;border-radius:0}
+.quick{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:14px
+}
+.quick-card{
+  background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px;
+  box-shadow:0 10px 25px rgba(14,46,85,.06);text-align:center
+}
+.quick-card strong{display:block;margin-top:8px;font-size:14px}
+.main-grid{
+  display:grid;grid-template-columns:1.3fr .7fr;gap:14px;margin-top:14px
+}
+.panel{
+  background:#fff;border:1px solid var(--line);border-radius:22px;padding:24px;
+  box-shadow:0 10px 28px rgba(14,46,85,.06)
+}
+.panel h3{margin:0 0 14px;color:var(--navy);font-size:22px}
+.panel p{line-height:2;color:var(--muted);margin:0}
+.stats{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:16px
+}
+.stat{background:var(--soft);border-radius:16px;padding:15px;text-align:center}
+.stat b{display:block;font-size:24px;color:var(--blue)}
+.news-panel{
+  background:linear-gradient(160deg,#0b2b55,#163f74);
+  color:#fff
+}
+.news-panel h3{color:#fff}
+.news-head{
+  display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:12px
+}
+.news-head small{color:#b9d6f6}
+.news-list{display:grid;gap:9px}
+.news-item{
+  background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);
+  border-radius:14px;padding:12px 13px;display:block
+}
+.news-item small{display:block;color:#9bc8fa;margin-bottom:5px}
+.news-item b{font-size:13px;line-height:1.7}
+.news-status{font-size:12px;color:#bed6ef}
+.sections{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:14px
+}
+.timeline article{padding:12px 0;border-bottom:1px solid #e8eef5}
+.timeline article:last-child{border-bottom:0}
+.timeline strong{display:block;color:var(--blue);margin-bottom:4px}
+.timeline span{font-size:12px;color:var(--muted)}
+.skills{display:flex;flex-wrap:wrap;gap:8px}
+.skill{background:var(--soft);border:1px solid var(--line);border-radius:999px;padding:9px 12px;font-size:12px}
+.domain{
+  margin-top:14px;border-radius:22px;background:linear-gradient(135deg,#0b2b55,#2a64a6);
+  color:#fff;padding:32px;text-align:center
+}
+.domain small{opacity:.75}
+.domain b{display:block;font-size:clamp(30px,6vw,58px);margin-top:5px;letter-spacing:.5px}
+.contact{margin-top:14px;text-align:center}
+.contact-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:14px}
+.contact-grid a{
+  background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px 10px;
+  box-shadow:0 8px 22px rgba(14,46,85,.05);font-size:13px
+}
+footer{margin-top:14px;background:#071f3d;color:#fff;border-radius:22px;padding:26px;text-align:center}
+footer b{font-size:24px;letter-spacing:1px}
+footer span{display:block;color:#9fbfe0;margin-top:6px;font-size:12px}
+
+@media(max-width:860px){
+  .nav{display:none}
+  .hero{grid-template-columns:1fr}
+  .hero-copy{padding:34px 26px}
+  .hero-art{min-height:240px}
+  .main-grid{grid-template-columns:1fr}
+  .sections{grid-template-columns:1fr}
+}
+@media(max-width:620px){
+  .shell{width:min(100% - 14px,1180px);padding-top:8px}
+  .topbar{border-radius:18px;padding:14px}
+  .brand-mark{width:48px;height:48px;border-radius:14px;font-size:18px}
+  .brand-copy b{font-size:15px}
+  .hero{border-radius:20px}
+  .hero-copy{padding:28px 20px}
+  .hero h1{font-size:42px}
+  .hero h2{font-size:18px}
+  .quick{grid-template-columns:repeat(2,1fr)}
+  .quick-card{padding:14px}
+  .stats{grid-template-columns:repeat(3,1fr)}
+  .stat{padding:12px 6px}
+  .stat b{font-size:20px}
+  .contact-grid{grid-template-columns:repeat(2,1fr)}
+  .panel{padding:19px}
+  .domain{padding:26px 16px}
+}
+</style>
+</head>
+<body>
+<div class="shell">
+
+<header class="topbar">
+  <div class="brand">
+    <div class="brand-mark">AG07</div>
+    <div class="brand-copy"><b>أحمد المغني</b><span>AHMED ALMOGHANI</span></div>
+  </div>
+  <nav class="nav">
+    <a href="#about">من أنا</a>
+    <a href="#experience">الخبرات</a>
+    <a href="#education">المؤهلات</a>
+    <a href="#news">الأخبار</a>
+    <a href="#contact">التواصل</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-copy">
+    <span class="eyebrow">مرحباً بك في موقعي الشخصي</span>
+    <h1>أحمد المغني</h1>
+    <h2>مدقق حسابات <span style="font-size:14px">(المرتبة السابعة)</span></h2>
+    <p>مساحة شخصية لعرض الخبرات والمؤهلات والمهارات، مع قسم أخبار محدث باستمرار وروابط التواصل المباشر.</p>
+    <div class="cta">
+      <a class="btn primary" href="#experience">عرض السيرة</a>
+      <a class="btn" href="#contact">تواصل معي</a>
+    </div>
+  </div>
+  <div class="hero-art" aria-hidden="true"></div>
+</section>
+
+<section class="quick">
+  <div class="quick-card">◎<strong>الدقة</strong></div>
+  <div class="quick-card">◉<strong>الالتزام</strong></div>
+  <div class="quick-card">▦<strong>التطوير</strong></div>
+  <div class="quick-card">◆<strong>الخبرة</strong></div>
+</section>
+
+<section class="main-grid">
+  <div id="about" class="panel">
+    <h3>نبذة عني</h3>
+    <p>أعمل في مجال التدقيق والمراجعة المالية، ولدي خبرة مهنية ممتدة في الأعمال الإدارية والمالية، مع اهتمام بالتقنية والتنظيم والتطوير المستمر.</p>
+    <div class="stats">
+      <div class="stat"><b>+18</b><span>سنة خبرة</span></div>
+      <div class="stat"><b>3</b><span>مسارات وظيفية</span></div>
+      <div class="stat"><b>2</b><span>مؤهلات</span></div>
+    </div>
+  </div>
+
+  <aside id="news" class="panel news-panel">
+    <div class="news-head">
+      <div><small>تحديث تلقائي</small><h3>آخر الأخبار</h3></div>
+      <span>●</span>
+    </div>
+    <div id="newsStatus" class="news-status">جاري تحميل الأخبار...</div>
+    <div id="newsList" class="news-list"></div>
+  </aside>
+</section>
+
+<section class="sections">
+  <div id="experience" class="panel timeline">
+    <h3>الخبرات الوظيفية</h3>
+    <article><strong>مدقق حسابات</strong><span>وزارة الشؤون الإسلامية والدعوة والإرشاد · 2021 – حالياً</span></article>
+    <article><strong>مأمور صرف</strong><span>وزارة الشؤون الإسلامية والدعوة والإرشاد · 2011 – 2021</span></article>
+    <article><strong>كاتب</strong><span>وزارة الشؤون الإسلامية والدعوة والإرشاد · 2007 – 2011</span></article>
+  </div>
+
+  <div id="education" class="panel timeline">
+    <h3>المؤهلات التعليمية</h3>
+    <article><strong>بكالوريوس الدعوة</strong><span>جامعة الإمام محمد بن سعود الإسلامية · 2016</span></article>
+    <article><strong>دبلوم الشبكات</strong><span>المؤسسة العامة للتدريب التقني والمهني · 2010</span></article>
+  </div>
+
+  <div class="panel">
+    <h3>المهارات</h3>
+    <div class="skills">
+      <span class="skill">التدقيق</span><span class="skill">المراجعة</span><span class="skill">التنظيم</span>
+      <span class="skill">إدارة الوقت</span><span class="skill">حل المشكلات</span><span class="skill">العمل الجماعي</span>
+      <span class="skill">التقنية</span><span class="skill">إعداد التقارير</span>
+    </div>
+  </div>
+</section>
+
+<section class="domain">
+  <small>الموقع الرسمي</small>
+  <b>almoghani.net</b>
+</section>
+
+<section id="contact" class="panel contact">
+  <h3>تواصل معي</h3>
+  <div class="contact-grid">
+    <a href="https://wa.me/966557073007">واتساب<br><small>0557073007</small></a>
+    <a href="mailto:Ahmed@almoghani.net">البريد<br><small>Ahmed@almoghani.net</small></a>
+    <a href="tel:+966557073007">الجوال<br><small>اتصال مباشر</small></a>
+    <a href="#">سناب شات<br><small>أضف الرابط لاحقاً</small></a>
+  </div>
+</section>
+
+<footer>
+  <b>AG07</b>
+  <span>AHMED ALMOGHANI · أحمد المغني</span>
+</footer>
+
+</div>
+
+<script>
+const newsList = document.getElementById('newsList');
+const newsStatus = document.getElementById('newsStatus');
+
+const feeds = [
+  ['السعودية','السعودية'],
+  ['التقنية','تقنية السعودية'],
+  ['الاقتصاد','اقتصاد السعودية']
+];
+
+function esc(s=''){
+  const d=document.createElement('div');
+  d.textContent=s;
+  return d.innerHTML;
+}
+
+async function loadNews(){
+  newsStatus.style.display='block';
+  newsStatus.textContent='جاري تحميل الأخبار...';
+  const items=[];
+  for(const [label,q] of feeds){
+    try{
+      const rss='https://news.google.com/rss/search?q='+encodeURIComponent(q)+'&hl=ar&gl=SA&ceid=SA:ar';
+      const api='https://api.rss2json.com/v1/api.json?rss_url='+encodeURIComponent(rss);
+      const r=await fetch(api,{cache:'no-store'});
+      const d=await r.json();
+      const item=d.items && d.items[0];
+      if(!item) throw new Error('empty');
+      items.push(`<a class="news-item" href="${item.link}" target="_blank" rel="noopener">
+        <small>${label}</small><b>${esc(item.title)}</b>
+      </a>`);
+    }catch(e){
+      items.push(`<div class="news-item"><small>${label}</small><b>تعذر التحديث الآن، وسيعاد تلقائياً.</b></div>`);
+    }
+  }
+  newsList.innerHTML=items.join('');
+  newsStatus.style.display='none';
+}
+loadNews();
+setInterval(loadNews,15*60*1000);
+</script>
+</body>
+</html>
