@@ -1,0 +1,5 @@
+*{box-sizing:border-box}html,body{margin:0;padding:0;background:#02070b;width:100%;min-height:100%}
+body{overflow-x:hidden}.page{position:relative;width:100%;max-width:900px;margin:auto;line-height:0}
+.design{display:block;width:100%;height:auto}.hot{position:absolute;display:block;z-index:10;border-radius:16px}
+.wa{left:5%;top:77%;width:21%;height:6.7%}.web{left:27%;top:77%;width:22%;height:6.7%}
+.x{left:50%;top:77%;width:22%;height:6.7%}.mail{left:73%;top:77%;width:22%;height:6.7%}
