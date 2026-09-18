@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#05070b">
+<title>ALMOGHANI AI | Digital System</title>
+<style>
+:root{--bg:#05070b;--panel:rgba(11,17,25,.78);--line:rgba(99,231,255,.16);--c:#63e7ff;--v:#9b7cff;--t:#eef7ff;--m:#8492a5}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:#05070b;color:var(--t);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Tahoma,Arial,sans-serif}
+body{background:radial-gradient(circle at 15% 0,rgba(99,231,255,.14),transparent 32%),radial-gradient(circle at 90% 15%,rgba(155,124,255,.12),transparent 28%),#05070b}
+body:before{content:"";position:fixed;inset:0;z-index:-1;background-image:linear-gradient(rgba(99,231,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(99,231,255,.03) 1px,transparent 1px);background-size:30px 30px}
+.shell{width:min(960px,calc(100% - 24px));margin:auto;padding:12px 0 30px}.top{display:flex;justify-content:space-between;align-items:center;padding:13px 15px;border:1px solid var(--line);border-radius:18px;background:rgba(7,11,17,.78);backdrop-filter:blur(18px);position:sticky;top:8px;z-index:9}.brand{font-weight:900;letter-spacing:2px}.brand span{color:var(--c)}.back{color:#cbd7e5;text-decoration:none;font-size:12px}.hero{text-align:center;padding:42px 8px 22px}.orb{width:72px;height:72px;border-radius:50%;margin:auto;background:radial-gradient(circle at 35% 30%,#fff,var(--c) 18%,var(--v) 50%,#07101a 72%);box-shadow:0 0 55px rgba(99,231,255,.32);animation:float 3s ease-in-out infinite}@keyframes float{50%{transform:translateY(-7px);box-shadow:0 0 75px rgba(155,124,255,.35)}}h1{font-size:clamp(36px,8vw,66px);margin:15px 0 3px;letter-spacing:-2px}.sub{color:var(--c);font:10px ui-monospace,monospace;letter-spacing:3px}.hero p{color:var(--m);font-size:13px}
+.chat{height:min(570px,64vh);min-height:480px;border:1px solid var(--line);border-radius:25px;background:var(--panel);backdrop-filter:blur(20px);display:flex;flex-direction:column;overflow:hidden;box-shadow:0 30px 100px rgba(0,0,0,.3)}.bar{padding:12px 15px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;font:11px ui-monospace,monospace}.online{color:#65ffb1}.messages{flex:1;overflow:auto;padding:17px}.msg{max-width:82%;padding:12px 14px;margin:9px 0;border-radius:17px;line-height:1.65;font-size:13px;white-space:pre-wrap}.bot{margin-left:auto;background:rgba(99,231,255,.07);border:1px solid var(--line)}.user{margin-right:auto;background:linear-gradient(135deg,rgba(99,231,255,.17),rgba(155,124,255,.16));border:1px solid rgba(155,124,255,.22)}.quick{display:flex;gap:7px;overflow:auto;padding:0 13px 10px;scrollbar-width:none}.quick button{white-space:nowrap;background:transparent;color:#aebdce;border:1px solid var(--line);border-radius:999px;padding:8px 11px}.composer{display:flex;gap:8px;padding:11px;border-top:1px solid var(--line);background:rgba(4,7,11,.55)}textarea{flex:1;resize:none;min-height:48px;max-height:110px;border:1px solid var(--line);border-radius:15px;background:#05090e;color:#fff;padding:13px;outline:none;font:inherit}.send{width:52px;border:0;border-radius:15px;background:linear-gradient(135deg,var(--c),var(--v));font-size:19px;font-weight:900;cursor:pointer}.note{text-align:center;color:#596777;font-size:10px;padding:14px;line-height:1.6}
+@media(max-width:520px){.hero{padding:28px 5px 16px}.orb{width:60px;height:60px}.chat{height:68vh;min-height:440px}.msg{max-width:90%}}
+</style>
+</head>
+<body>
+<main class="shell">
+<header class="top"><div class="brand">ALMOGHANI <span>// AI</span></div><a class="back" href="index.html">SYSTEM ←</a></header>
+<section class="hero"><div class="orb"></div><h1>ALMOGHANI AI</h1><div class="sub">ARTIFICIAL INTELLIGENCE INTERFACE</div><p>مساعدك الذكي داخل ALMOGHANI DIGITAL SYSTEM</p></section>
+<section class="chat">
+<div class="bar"><span>AI CONSOLE / 01</span><span class="online">● INTERFACE READY</span></div>
+<div class="messages" id="messages"><div class="msg bot">مرحبًا بك في ALMOGHANI AI 🤖<br>واجهة المساعد جاهزة. اختر أمرًا سريعًا أو اكتب طلبك بالأسفل.</div></div>
+<div class="quick">
+<button onclick="preset('اكتب لي خطابًا رسميًا')">✍️ خطاب رسمي</button>
+<button onclick="preset('لخص هذا النص: ')">⚡ تلخيص</button>
+<button onclick="preset('ترجم إلى الإنجليزية: ')">🌐 ترجمة</button>
+<button onclick="preset('ساعدني في كتابة كود: ')">💻 برمجة</button>
+<button onclick="clearChat()">⌫ مسح</button>
+</div>
+<div class="composer"><textarea id="input" placeholder="اكتب رسالتك إلى ALMOGHANI AI..." onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();send()}"></textarea><button class="send" onclick="send()">↑</button></div>
+</section>
+<div class="note">ALMOGHANI AI متصل بالخادم الآمن. مفتاح API لا يتم تخزينه داخل هذه الصفحة.</div>
+</main>
+<script>
+const m=document.getElementById('messages'),i=document.getElementById('input');
+function add(t,c){let d=document.createElement('div');d.className='msg '+c;d.textContent=t;m.appendChild(d);m.scrollTop=m.scrollHeight;return d}
+function preset(t){i.value=t;i.focus()}
+async function send(){
+  const t=i.value.trim();
+  if(!t)return;
+  add(t,'user');
+  i.value='';
+  i.disabled=true;
+  const loading=add('جاري التفكير...','bot');
+  try{
+    const r=await fetch('/api/chat',{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({message:t})
+    });
+    const data=await r.json();
+    loading.remove();
+    if(!r.ok) throw new Error(data.error||'تعذر الحصول على رد');
+    add(data.reply||'لم يصل رد من الخادم.','bot');
+  }catch(e){
+    loading.remove();
+    add('تعذر الاتصال بـ ALMOGHANI AI: '+e.message,'bot');
+  }finally{
+    i.disabled=false;
+    i.focus();
+  }
+}
+function clearChat(){m.innerHTML='<div class="msg bot">تم بدء محادثة جديدة 🤖</div>'}
+</script>
+</body></html>
