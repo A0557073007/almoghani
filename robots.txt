@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://almoghani.net/sitemap.xml
