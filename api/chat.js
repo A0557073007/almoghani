@@ -18,10 +18,10 @@ export default async function handler(req, res) {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "Authorization": `Bearer ${process.env.OPENAI_API_KEY}`
+        "Authorization": "Bearer " + process.env.OPENAI_API_KEY
       },
       body: JSON.stringify({
-        model: "gpt-5-mini",
+        model: "gpt-5.6-luna",
         input: message,
         max_output_tokens: 1000
       })
@@ -43,6 +43,8 @@ export default async function handler(req, res) {
 
     return res.status(200).json({ reply });
   } catch (error) {
-    return res.status(500).json({ error: "حدث خطأ في ALMOGHANI AI" });
+    return res.status(500).json({
+      error: "حدث خطأ في ALMOGHANI AI"
+    });
   }
 }
